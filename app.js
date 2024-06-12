@@ -35,6 +35,21 @@ app.post("/view", (req, res) => {
 )
     //res.send("view page")
 })
+
+
+app.post("/search", (req, res) => {
+   // res.send("add search")
+   let input=req.body
+   recipeModel.find(input).then(
+    (data)=>{
+        res.json(data)
+    }
+).catch((error)=>{
+    res.json(error)
+}
+)
+})
+
 app.listen(8080, () => {
     console.log("server started")
 })
