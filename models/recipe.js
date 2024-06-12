@@ -6,5 +6,5 @@ const schema=mongoose.Schema(
         "rating":{type:String,require:true}
     }
 )
-let reviewModel=mongoose.model("review",schema)
-module.exports={reviewModel}
+let recipeModel=mongoose.model("recipe",schema)
+module.exports={recipeModel}
